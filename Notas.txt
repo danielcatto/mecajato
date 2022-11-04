@@ -1,0 +1,3 @@
+projeto mecajato canal youtube pythonando
+
+Desenvolvendo uma APLICAÇÃO pra OFICINAS E LAVA JATOS com Python e Django | MECAJATO #01 realizado codigo até 14:42 minutos
