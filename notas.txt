@@ -1,0 +1,17 @@
+video 1 - minuto 18:02 - https://www.youtube.com/watch?v=pNlHlhWDpV0&list=PL3gEA6Xsr_enTjEeyAyLrqdJmEFM8FvwM 
+
+
+passos: 
+1 criar um projeto
+2 fazer configuraçao do settings basico
+3 inserir configuraçao dos arquivos estaticos (video 1 inicio)
+4 criar um app (ex: clientes)
+5 criar um rota na urls do projeto com include
+6 criar uma url para clientes no app clientes (crie o arquivo)
+7 em settings/templates/DIRS insira o caminho da pasta de templates que será usado video 1 17minutos
+8 criar pasta templates na raiz do projeto para o app clientes e fazer o template base
+9 criar arquivo base.html
+10 em templates criar as pastas para segmentar os arquivos dos css's e js's
+
+MINUTO 45 DA AULA 1
+
