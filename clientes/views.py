@@ -5,7 +5,8 @@ import re
 # Create your views here.
 def clientes(request):
     if request.method == "GET":
-        return render(request, 'clientes.html') 
+        clientes_list = Cliente.objects.all()
+        return render(request, 'clientes.html', {'clientes_list': clientes_list}) 
     elif request.method == "POST":
         nome = request.POST.get('nome')
         sobrenome = request.POST.get('sobrenome')
