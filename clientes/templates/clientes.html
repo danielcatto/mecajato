@@ -76,7 +76,21 @@
                     <option value="{{ cliente.id }}">{{ cliente.nome }}</option>
                 {% endfor %}
             </select>
+
         </p>
+        <br>
+        <hr>
+        <!--div com style none usado pelo javascript em templates/static/clintes/js/clientes.js para mostrar um formulário-->
+        <div id="form-att-cliente">
+            <p>Nome</p>
+            <input type="text" id="nome" class="form-control">
+            <p>Sobrenome</p>
+            <input type="text" id="sobrenome" class="form-control">
+            <p>Email</p>
+            <input type="text" id="email" class="form-control">
+            <p>CPF</p>
+            <input type="text" id="cpf" class="form-control">
+        </div>
     </div>
 </div>
 <script src="{% static 'clientes/js/clientes.js' %}"></script>

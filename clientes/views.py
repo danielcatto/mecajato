@@ -1,7 +1,10 @@
 from django.shortcuts import render
-from  django.http import HttpResponse
+from  django.http import HttpResponse, JsonResponse
 from .models import Cliente, Carro
 import re
+from django.core import serializers
+import json
+
 # Create your views here.
 def clientes(request):
     if request.method == "GET":
@@ -38,8 +41,12 @@ def clientes(request):
         for carro, placa, ano in zip(carros, placas, anos):
             car = Carro(carro=carro, placa=placa, ano=ano, cliente=cliente)
             car.save()
+        return render(request, "clientes.html")
 
 
-        
-    return render(request, "clientes.html", {'nome': nome, 'sobrenome': sobrenome, 'cpf':cpf, 'carros': zip(carros, placas, anos)})
-
+def att_cliente(request):
+    id_cliente = request.POST.get('id_cliente')
+    cliente =  Cliente.objects.filter(id=id_cliente)
+    cliente_json =  json.loads(serializers.serialize('json', cliente))[0]['fields']
+    
+    return JsonResponse(cliente_json)
